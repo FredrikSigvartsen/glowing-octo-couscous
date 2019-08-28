@@ -1,0 +1,236 @@
+@import './variables';
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,700');
+
+@font-face {
+  font-family: 'Rajdhani', 'Open Sans', sans-serif;
+  font-style: normal;
+  font-display: swap;
+}
+
+/******************* GENERAL STYLES *******************/
+html,
+html body,
+body {
+  p {
+    color: $black;
+    font-family: $text-dark;
+    font-size: 1.2rem;
+    font-weight: 500;
+    overflow-x: hidden;
+    letter-spacing: 1.2px;
+    line-height: 36px;
+    margin-right: 10px;
+    word-wrap: break-word;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5 {
+    color: $title-font-color;
+    font-family: $title-font;
+    font-weight: inherit;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+  }
+  h1,
+  .content h1 {
+    font-size: $h1-size;
+    line-height: 66px;
+    font-weight: 500;
+    padding-bottom: 20px;
+  }
+  h2,
+  .content h2 {
+    font-size: $h1-size / 1.2;
+    font-weight: 500;
+    line-height: 46px;
+    padding-bottom: 15px;
+  }
+  h3,
+  .content h3 {
+    font-size: $h1-size / 1.5;
+    font-weight: 500;
+    line-height: 36px;
+    padding-bottom: 10px;
+  }
+  h4,
+  .content h4 {
+    font-size: $h1-size / 2 !important;
+  }
+  @media only screen and (max-width: $tablet) {
+    h1,
+    .content h1 {
+      font-size: $h1-size / 1.75;
+    }
+    h2,
+    .content h2 {
+      font-size: $h1-size / 2;
+    }
+    h3,
+    .content h3 {
+      font-size: $h1-size / 2.25;
+    }
+  }
+  a.link,
+  p a,
+  li a.link {
+    color: $primary;
+    font-family: $text-dark;
+    font-size: 1.2rem;
+    font-weight: 500;
+    overflow-x: hidden;
+    letter-spacing: 1.4px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    &:hover {
+      color: $primary;
+    }
+    &:hover:after {
+      width: 100%;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      border-bottom: 1px solid $primary;
+      transition: 0.5s ease;
+    }
+  }
+}
+
+li {
+  color: $black;
+  font-family: $text-dark;
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+  word-wrap: break-word;
+}
+div .button {
+  border-radius: 50px;
+  height: auto;
+  font-family: $text-dark;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  width: auto;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  margin: 30px 0;
+  padding: 10px 27px;
+  -webkit-appearance: none;
+  &.is-secondary {
+    background-color: #070707;
+    color: #f4f4f4;
+  }
+  &:hover,
+  &:focus {
+    background-color: $black;
+    color: $white;
+    opacity: 0.85;
+  }
+  &.is-primary {
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+  }
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    color: $white;
+  }
+}
+div .button.is-outlined {
+  font-size: 0.8rem;
+  background-color: transparent;
+  color: $white;
+  transition: all 0.5s ease;
+  padding: 15px;
+  margin-top: 10px;
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $primary;
+  }
+}
+
+.text-is-light {
+  @include txtStyle_light_grey;
+}
+
+nav.navbar {
+  .navbar-brand .image img {
+    max-width: 200px;
+    max-height: 3rem;
+  }
+  .navbar-item {
+    padding: 0 0.75rem !important;
+  }
+}
+
+/******************* NETTBUTIKK *******************/
+
+.store {
+  .store-menu {
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    min-height: 50px;
+    z-index: 100;
+    border-bottom: 1px solid $color-border-grey;
+    width: 100%;
+    position: fixed;
+    background-color: $white;
+    .branding {
+      min-height: 65px;
+      width: 100%;
+      align-items: center;
+      flex: 1;
+
+      & * {
+        width: 100px;
+        height: 40px;
+        // text-indent: -999em;
+        display: block;
+        overflow: hidden;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-size: contain;
+      }
+    }
+    .store-navigation-container {
+      flex: 9;
+      ul li {
+        display: flex;
+        justify-content: center;
+        list-style-position: inside;
+        counter-reset: menuCounter;
+        height: 100%;
+        list-style-type: none;
+      }
+    }
+  }
+  .store-content {
+  }
+
+  .store-footer {
+  }
+}
+
+section#drag-and-drop {
+  background-color: $light-blue;
+}

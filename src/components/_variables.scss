@@ -1,0 +1,102 @@
+@import '~bulma/sass/utilities/initial-variables';
+// COLORS
+// $white: #edece7;
+$midnight: #010a2e;
+$primary: $midnight;
+$text-dark: #15192e;
+$text-light-pink: #f2f2f2;
+$testcolor: #000;
+$title-font-color: $text-dark;
+$black: $text-dark;
+$light-blue: #2574a9;
+
+$color-border-grey: #ddd;
+
+//Hover effects
+$white-hover: #cccccc;
+
+// SHADOWS
+$boxShadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.13);
+$newBoxShadow: 0 16px 24px 0 #c7d3e3;
+
+//FONT SIZES
+$XXS: 4px;
+$XS: 8px;
+$S: 12px;
+$M: 16px;
+$L: 24px;
+$XL: 32px;
+$XXL: 48px;
+
+$h1-size: $L;
+
+//FONT WEIGHTS
+$thin: 300;
+$regular: 400;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+
+// GRID SIZES
+$gridColumnTemplate: repeat(auto-fill, minmax(250px, 1fr));
+$gridColumnGap: 0px;
+$full: 1 / span 10;
+$main: 2 / span 8;
+
+$navbar-height: 1rem;
+
+$gap: 10px;
+
+$icon-dimensions-large: 3rem;
+
+@font-face {
+  font-family: 'Calibri';
+  src: url(/fonts/Calibri.ttf);
+  font-style: normal;
+  font-display: swap;
+}
+
+$primaryFont: 'Calibri', sans-serif;
+$title-font: $primaryFont;
+
+@mixin txtStyle_data {
+  font-family: $primaryFont;
+  font-size: 1rem;
+  color: $white;
+}
+
+@mixin txtStyle_sealabVision {
+  font-family: $primaryFont;
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  color: $white;
+}
+
+@mixin txtStyle_siteName {
+  font-family: $primaryFont;
+  font-size: 12px;
+  color: $white;
+}
+
+@mixin txtStyle_detail {
+  font-family: $primaryFont;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: $white;
+}
+
+@mixin txtStyle_footer {
+  font-family: $primaryFont;
+  font-size: 10px;
+  font-weight: 300;
+  color: $white;
+}
+
+@mixin txtStyle_light_grey {
+  color: #15192e;
+  opacity: 0.7;
+  font-weight: 300;
+  font-size: 1rem;
+}

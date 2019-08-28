@@ -1,0 +1,11 @@
+src/registerServiceWorker.js
+src/serviceWorker.js
+src/index.js
+node_modules/*
+public/*
+build/*
+config/*
+server/*
+utils/*
+images/*
+gatsby*
